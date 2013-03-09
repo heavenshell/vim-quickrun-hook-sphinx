@@ -29,7 +29,7 @@ function! s:hook.on_module_loaded(session, context)
       let source_path = '.'
       let build_dir_name = '_build'
     endif
-    let build_path = printf('%s/%s', root_path, build_dir_name)
+    let build_path = printf('%s/%s/html', root_path, build_dir_name)
     let doctrees_path = printf('%s/%s/doctrees', root_path, build_dir_name)
 
     let new_cmdopt = printf('%s -d %s %s %s', a:session['config']['cmdopt'], doctrees_path, source_path, build_path)
